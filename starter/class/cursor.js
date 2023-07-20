@@ -24,21 +24,43 @@ class Cursor {
 
   up() {
     // Move cursor up
+    if(this.row > 0){
+     // console.log(this.row)
+    this.row -=1}
   }
 
   down() {
     // Move cursor down
-  }
+    if(this.row < (this.numRows-1)){
+      //console.log("row: ",this.row)
+      //console.log("num row: ",this.numRows)
+       this.row +=1
+       return this}
+    
+      
+      }
+
+  
 
   left() {
     // Move cursor left
+  if (this.col > 0) {
+    this.col -= 1
+  }
+
   }
 
   right() {
     // Move cursor right
+    if (this.col < (this.numCols-1)){
+      // console.log("before col: ",this.col)
+      //console.log("before num row: ",this.numRows)
+      this.col += 1
+    }
   }
 
 }
 
 
 module.exports = Cursor;
+
